@@ -26,6 +26,7 @@ row <- function(params, LL) {
   names(params) <- c("k", "r", "alpha", "a", "b")
   c(round(params, 3), LL = round(LL))
 }
+#print LLs to compare
 rbind(`BG/NBD` = row(c(1, params.bgnbd),
                      BTYD::bgnbd.cbs.LL(params.bgnbd, cal.cbs1)),
       `BG/CNBD-k` = row(params.bgcnbd,
